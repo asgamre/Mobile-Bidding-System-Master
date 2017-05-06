@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+ 
+<hibernate-mapping>
+ <class name="Mobile" table="mobile">
+ <id name="mobileId" type="int" column="mobile_id" >
+ <generator class="identity"/>
+ </id>
+ <property name="mobileName">
+ <column name="mobilename" />
+ </property>
+ <property name="companyName">
+ <column name="company_name" />
+ </property>
+ </class>
+ </hibernate-mapping>

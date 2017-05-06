@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+<cron>
+<url>/cron/mycronjob</url>
+<description>"Sell Item to Highest Bidder every minute"</description>
+<schedule>Every 1 Minute</schedule>
+</cron>
+</cronentries>

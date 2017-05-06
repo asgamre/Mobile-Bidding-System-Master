@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>LoginExample</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>LoginPage.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+<description>Votre description </description>
+<res-ref-name>mail/NomDeLaRessource</res-ref-name>
+<res-type>javax.mail.Session</res-type>
+<res-auth>Container</res-auth>
+<res-sharing-scope>Shareable</res-sharing-scope>
+</resource-ref>
+<servlet> 
+<servlet-name>ProfileServlet</servlet-name>   
+<servlet-class>Profile</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>ProfileServlet</servlet-name>
+<url-pattern>/GetProfile.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>UpdateProfile</servlet-name>   
+<servlet-class>UpdateProfile</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>UpdateProfile</servlet-name>
+<url-pattern>/UpdateProfile.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>AddPost</servlet-name>   
+<servlet-class>AddPost</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>AddPost</servlet-name>
+<url-pattern>/AddPost.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Home</servlet-name>   
+<servlet-class>Home</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>Home</servlet-name>
+<url-pattern>/Home.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>PriorLoginServlet</servlet-name>   
+<servlet-class>PriorLogin</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>PriorLoginServlet</servlet-name>
+<url-pattern>/servlet/priorlogin</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>GetMyPostsServlet</servlet-name>   
+<servlet-class>GetMyPosts</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>GetMyPosts</servlet-name>
+<url-pattern>/GetMyPosts.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>GetPost</servlet-name>   
+<servlet-class>GetPost</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>GetPost</servlet-name>
+<url-pattern>/GetPost.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>GetMyBids</servlet-name>   
+<servlet-class>GetMyBids</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>GetMyBids</servlet-name>
+<url-pattern>/GetMyBids.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>ShoppingCart</servlet-name>   
+<servlet-class>ShoppingCart</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>ShoppingCart</servlet-name>
+<url-pattern>/ShoppingCart.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>Search</servlet-name>   
+<servlet-class>Search</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>Search</servlet-name>
+<url-pattern>/SearchPost.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>AddBid</servlet-name>   
+<servlet-class>AddBid</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>AddBid</servlet-name>
+<url-pattern>/AddBid.jsp</url-pattern>
+</servlet-mapping>
+
+<servlet> 
+<servlet-name>submitCart</servlet-name>   
+<servlet-class>submitCart</servlet-class> 
+</servlet> 
+<servlet-mapping>
+<servlet-name>submitCart</servlet-name>
+<url-pattern>/Checkout.jsp</url-pattern>
+</servlet-mapping>
+<error-page>
+	<error-code>404</error-code>
+	<location>/Error.jsp</location>
+</error-page>
+<filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+<filter>
+        <filter-name>CompressingFilter</filter-name>
+        <filter-class>com.github.ziplet.filter.compression.CompressingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CompressingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>

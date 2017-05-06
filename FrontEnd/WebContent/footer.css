@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+/************************************************************
+*************************Footer******************************
+*************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+}
+.footer-bottom
+{
+background-color: #2C3E50;
+}
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+/************************************************************
+*************************Footer******************************
+*************************************************************/
